@@ -16,3 +16,11 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { loadDynamicBannerText } from '../components/banner';
+
+document.addEventListener('turbolinks:load', () => {
+  initUpdateNavbarOnScroll();
+  loadDynamicBannerText();
+});
+
